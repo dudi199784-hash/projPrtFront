@@ -3,5 +3,5 @@ export default function Vision(){
         <>
             비전페이지
         </>
-    )
+    );
 }
