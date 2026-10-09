@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import "./globals.css"
+// import "./globals.css"
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -8,10 +9,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="ko"
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="ko">
+      <body>
+        <nav>
+          <Link href="/">홈</Link>
+          <Link href="/about">소개</Link>
+          <Link href="/article">게시판</Link>
+        </nav>
+        {children}
+      </body>
     </html>
   );
 }
